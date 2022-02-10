@@ -1,0 +1,32 @@
+.custom-carousel {
+  overflow-x: auto;
+  cursor: grab;
+  display: flex;
+  @media (max-width: 992px) {
+    margin-top: 3rem;
+  }
+
+  &::-webkit-scrollbar {
+    height: 0;
+  }
+  .items {
+    display: inline-flex;
+    // padding: 0 0.3rem;
+    .item {
+      display: flex;
+      flex-direction: column;
+
+      margin-right: 3rem;
+      width: 450px;
+
+      button {
+        font-size: 0.9rem;
+        padding: 1rem 2rem;
+        font-weight: 500;
+        margin-top: 0;
+        margin-bottom: 0;
+        cursor: pointer;
+      }
+    }
+  }
+}

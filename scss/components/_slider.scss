@@ -1,0 +1,89 @@
+$dot-width: 5.5rem;
+$dot-height: 0.4rem;
+
+.slider {
+  position: relative;
+  &__item {
+    display: none;
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    &-btn {
+      padding: 1.3rem 4rem;
+      font-size: 1.1rem;
+    }
+    &.active {
+      display: flex;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #00000077;
+      mix-blend-mode: darken;
+      // z-index: -1;
+    }
+    &-content {
+      @include content-container;
+      text-align: center;
+      color: #ffffff;
+      position: relative;
+    }
+    &-header {
+      color: #ffffff;
+      font-size: 4.5rem;
+      font-weight: 700;
+      line-height: 4.6rem;
+      text-align: center;
+      margin: 0.1rem 0;
+      @media (max-width: $mobile-xl) {
+        font-size: 3rem;
+        font-weight: 700;
+        line-height: 3.5rem;
+      }
+      @media (max-width: 400px) {
+        font-size: 15vw;
+      }
+    }
+    &-subheader {
+      color: #ffffff;
+      font-size: 1.8rem;
+      font-weight: 400;
+      line-height: 2rem;
+    }
+  }
+  &__dots {
+    position: absolute;
+    bottom: 3rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    @media (max-width: 400px) {
+      margin: 0;
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  &__dots-item {
+    background-color: #fff;
+    width: $dot-width;
+    height: $dot-height;
+    margin: 0.4rem;
+    opacity: 0.5;
+    display: inline-block;
+    &.active {
+      background-color: $third;
+      opacity: 1;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

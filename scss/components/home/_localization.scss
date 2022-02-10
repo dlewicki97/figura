@@ -1,0 +1,20 @@
+.localization {
+  .between-sections__image {
+    position: relative;
+    img {
+      height: 400px;
+      width: 100%;
+      object-fit: cover;
+    }
+    .layout-shape.--left {
+      transform: translate(-100%, -50%) !important;
+    }
+    .layout-shape.--right {
+      transform: translate(0, -50%) !important;
+      width: 7.5rem;
+      border-width: 2.5rem;
+      height: 13rem;
+      right: 7.5rem;
+    }
+  }
+}

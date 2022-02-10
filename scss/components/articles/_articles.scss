@@ -1,0 +1,103 @@
+.articles {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  @include sections-padding;
+  @include padding-container;
+  padding-bottom: 2rem;
+  .article {
+    width: 33.33%;
+    padding: 1.5rem;
+    &__wrapper {
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.03);
+      height: 100%;
+      background-color: #fff;
+    }
+    @media (min-width: 992px) {
+      &:nth-child(-n + 3) {
+        padding-top: 0;
+      }
+      &:nth-child(3n - 2) {
+        padding-left: 0;
+      }
+      &:nth-child(3n) {
+        padding-right: 0;
+      }
+    }
+    @media (max-width: 992px) {
+      width: 100%;
+      padding: 0;
+      margin-bottom: 2rem;
+    }
+    &__photo {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 300px;
+      position: relative;
+    }
+    &__date {
+      background-color: #fff;
+      color: #101010;
+      padding: 0.5rem;
+      position: absolute;
+      top: 1.3rem;
+      right: 1.3rem;
+      font-size: 1.3rem;
+    }
+    &__content {
+      padding: 3rem;
+      background-color: #fff;
+      height: calc(100% - 300px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      @media (max-width: 992px) {
+        padding: 1rem;
+      }
+    }
+    &__title {
+      font-weight: 900;
+      font-size: 1.9rem;
+      margin-bottom: 1rem;
+      color: black;
+    }
+    &__short-description {
+      line-height: 40px;
+      font-size: 1.2rem;
+    }
+    &__link {
+      color: orange;
+      //   transition: color 0.2s;
+      letter-spacing: 3px;
+      font-weight: 100;
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      display: block;
+      width: fit-content;
+      animation-name: color-blink;
+      animation-timing-function: ease-in-out;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      &:hover {
+        color: $second;
+      }
+    }
+  }
+}
+
+@keyframes color-blink {
+  0% {
+    color: $first;
+  }
+  93% {
+    color: $first;
+  }
+  98% {
+    color: $second;
+  }
+  100% {
+    color: $first;
+  }
+}

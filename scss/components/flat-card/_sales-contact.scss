@@ -1,0 +1,131 @@
+.sales-contact {
+  margin-top: 5rem;
+  position: relative;
+  &__layout-shape {
+    right: 0;
+    top: 0;
+    width: 24rem;
+    height: 44rem;
+    border-width: 8rem;
+    z-index: 0;
+    transform: translate(50%, -50%);
+  }
+  @media (min-width: 992px) {
+    .main-section__description {
+      width: 60%;
+      margin-left: 0;
+    }
+  }
+  .main-section__description,
+  &__data {
+    @include padding-container;
+  }
+  &__logo-container {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  &__data {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @media (max-width: 992px) {
+      width: 100%;
+      justify-content: flex-start;
+      margin-top: 5rem;
+    }
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 20px;
+      a {
+        transition: color 0.2s;
+        &:hover {
+          color: $first;
+        }
+      }
+    }
+  }
+  &__address,
+  &__contact-links {
+    width: 50%;
+    @media (max-width: 992px) {
+      width: 100%;
+    }
+  }
+  &__photo-container {
+    position: relative;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+  }
+  &__photo {
+    @media (max-width: 768px) {
+      &__mask {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        transform: rotate(-180deg);
+        bottom: 0;
+        background-image: linear-gradient(
+          180deg,
+          #000 -15%,
+          rgba(0, 0, 0, 0) 126%
+        );
+      }
+    }
+  }
+  &__investition-logo {
+    position: absolute;
+    left: 8rem;
+    bottom: 4rem;
+    z-index: 1;
+    @media (max-width: 768px) {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 60vw;
+    }
+  }
+  &__form-container {
+    width: 35%;
+    position: absolute;
+    right: 5rem;
+    top: 0;
+    transform: translateY(-50%);
+    @media (max-width: 992px) {
+      position: relative;
+      width: 100%;
+      transform: unset;
+      right: unset;
+      left: 0;
+    }
+    .mask {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $second;
+      opacity: 0.77;
+    }
+    .form {
+      background-color: transparent;
+      position: relative;
+      button {
+        transition: background-color 0.2s, box-shadow 1s;
+        cursor: pointer;
+        @media (max-width: 500px) {
+          padding-right: 0;
+          padding-left: 0;
+          width: 100%;
+        }
+        &:hover {
+          box-shadow: 0px 0px 20px #000000d6;
+        }
+      }
+    }
+  }
+}

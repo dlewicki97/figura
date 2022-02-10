@@ -1,0 +1,33 @@
+.social-media {
+  &__row {
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+    @include content-container;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &__title {
+    @include section-title;
+  }
+  &__buttons {
+    gap: 0 1.7rem;
+    display: flex;
+    flex-wrap: wrap;
+    &-item {
+      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
+      padding: 1.2rem 1rem;
+      @media (max-width: 400px) {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+      }
+      i {
+        padding-right: 0.8rem;
+      }
+    }
+  }
+}

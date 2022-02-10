@@ -1,0 +1,84 @@
+.statistics-container {
+  display: flex;
+  flex-direction: column;
+  @include content-container;
+  padding-bottom: 9.75rem;
+  .project {
+    width: 100%;
+    height: auto;
+  }
+  .statistics {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 8rem;
+    padding-top: 11rem;
+    padding-bottom: 7rem;
+    @media (max-width: 576px) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    .statistic {
+      width: 25%;
+      text-align: center;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      @media (max-width: 992px) {
+        width: 100%;
+        margin-bottom: 2rem;
+      }
+      color: white;
+      .number {
+        margin-bottom: 2.5rem;
+        font-weight: 300;
+        font-size: 4rem;
+        @media (max-width: 992px) {
+          margin-bottom: 0rem;
+        }
+        sup {
+          font-size: 2rem;
+          font-weight: 500;
+        }
+      }
+      .title {
+        font-size: 1.3rem;
+        font-weight: 100;
+      }
+    }
+    .layout-shape {
+      position: absolute;
+      height: 11rem;
+      border-width: 2rem;
+      width: 6rem;
+      left: 3rem;
+      top: 0;
+      transform: translateY(-50%);
+    }
+    .investition-logo {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      height: 130px;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      @media (max-width: 450px) {
+        width: 90%;
+        height: auto;
+      }
+    }
+    .mask {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #100f38;
+      opacity: 0.8;
+    }
+  }
+}

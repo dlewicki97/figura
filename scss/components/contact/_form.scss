@@ -1,0 +1,37 @@
+@import "../custom-checkbox/custom-checkbox";
+
+.form {
+  border: 2px solid $first;
+  background-color: $second;
+  padding: 2rem;
+
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    outline: unset;
+    border: unset;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    text-align: center;
+    font-family: "DM Sans", sans-serif;
+    position: relative;
+    &::placeholder {
+      color: #707070;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    button {
+      font-weight: 300;
+      margin: 0;
+    }
+  }
+}

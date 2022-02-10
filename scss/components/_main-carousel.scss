@@ -1,0 +1,122 @@
+$item-padding: 1rem;
+.main-carousel {
+  margin-top: 3rem;
+  margin-bottom: 0 !important;
+  display: flex;
+  flex-wrap: wrap;
+  background: -webkit-linear-gradient(0deg, white 50%, #f7f7f7 50%);
+  @media (max-width: 992px) {
+    .main-carousel__text,
+    .custom-carousel {
+      width: 100% !important;
+    }
+  }
+  .main-carousel__text {
+    width: 33.33%;
+  }
+  .custom-carousel {
+    width: 66.67%;
+  }
+  @include padding-container;
+  .main-section__description {
+    padding-top: 0;
+    padding-bottom: 0;
+    a {
+      cursor: pointer;
+    }
+  }
+  &__container {
+    overflow-y: hidden;
+    margin-left: -1 * $item-padding;
+    margin-right: -1 * $item-padding;
+  }
+  &__item {
+    margin-left: $item-padding;
+
+    margin-right: $item-padding;
+    box-shadow: 0 0 1rem rgba(151, 127, 127, 0.06);
+    margin: 1rem 1rem;
+    display: grid;
+    align-content: space-between;
+    &-photo {
+      max-width: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100%;
+      position: relative;
+      @media (max-width: 992px) {
+        height: 300px;
+      }
+      .project {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 80%;
+        background-color: white;
+        transition: 0.2s height;
+      }
+      .project:not(.show) {
+        height: 0;
+      }
+      .project.show {
+        height: 100%;
+      }
+    }
+    &-description {
+      display: flex;
+      justify-content: space-between;
+      padding: 2rem;
+      align-items: center;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.06);
+      background-color: #fff;
+    }
+    &-category {
+      @include small-item-header;
+      margin-right: 1rem;
+      font-size: 1.3rem;
+    }
+    &-title {
+      @include small-item-header;
+      color: $first;
+      margin-right: 1rem;
+    }
+    &-project {
+      display: none;
+    }
+    &-show-project {
+    }
+  }
+  &__arrow--next,
+  &__arrow--prev {
+    padding: 0.5rem;
+  }
+
+  &__buttons {
+    display: flex;
+    button {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding: 0;
+      width: 60px;
+      cursor: pointer;
+      height: 60px;
+      margin-right: 1rem;
+      &:hover {
+        path {
+          stroke: orange;
+        }
+      }
+      svg {
+        height: 60px;
+        path {
+          transition: 0.2s stroke;
+        }
+      }
+    }
+  }
+}

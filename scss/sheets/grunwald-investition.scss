@@ -1,0 +1,46 @@
+@import "../layout/layout";
+@import "../components/main-banner";
+@import "../components/social-media";
+@import "../components/search-investition/main-section";
+@import "../components/search-investition/statistics";
+@import "../components/search-investition/map";
+@import "../components/search-investition/browser";
+
+.building-form-container {
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    .investition-logo {
+      @media (max-width: 500px) {
+        width: 100%;
+        height: auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+    }
+    .building-form__title {
+      padding-top: 2rem;
+      margin-bottom: 0;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      font-weight: 600;
+      line-height: 50px;
+      @media (min-width: 992px) {
+        width: 50%;
+      }
+    }
+    .button-container {
+      margin-top: 0.5rem;
+    }
+    .main-btn {
+      font-size: 1rem;
+      padding-right: 1.5rem;
+      padding-left: 1.5rem;
+      font-weight: 300;
+    }
+  }
+}

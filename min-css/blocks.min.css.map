@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,OAAO,AAAA,CACH,OAAO,CAAE,IAAI,CACb,qBAAqB,CAAE,cAAa,CACvC",
+    "sources": [
+        "../scss/blocks.scss"
+    ],
+    "names": [],
+    "file": "blocks.min.css"
+}

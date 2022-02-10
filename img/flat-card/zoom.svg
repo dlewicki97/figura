@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="111.89" height="111.89" viewBox="0 0 111.89 111.89">
+  <defs>
+    <filter id="Icon_material-loupe" x="0" y="0" width="111.89" height="111.89" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Icon_material-loupe)">
+    <path id="Icon_material-loupe-2" data-name="Icon material-loupe" d="M31.54,15.973H26.351V26.351H15.973V31.54H26.351V41.918H31.54V31.54H41.918V26.351H31.54ZM28.945,3a25.945,25.945,0,1,0,0,51.89H49.7A5.2,5.2,0,0,0,54.89,49.7V28.945A25.988,25.988,0,0,0,28.945,3Zm0,46.7A20.756,20.756,0,1,1,49.7,28.945,20.784,20.784,0,0,1,28.945,49.7Z" transform="translate(27 27)" fill="#fff"/>
+  </g>
+</svg>

@@ -1,0 +1,8 @@
+@mixin sections-margin {
+    margin-bottom: $content-margin*1.5;
+    margin-top: $content-margin*1.5;
+    @media (max-width: $mobile-xl) {
+        margin-top: $content-margin;
+        margin-bottom: $content-margin;
+    }
+}

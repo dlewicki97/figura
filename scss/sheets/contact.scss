@@ -1,0 +1,36 @@
+@import "../layout/layout";
+@import "../components/social-media";
+@import "../components/main-banner";
+@import "../components/about/main-section";
+@import "../components/about/invitation";
+@import "../components/contact/contact";
+
+.contact-article {
+  .aside-layout-shape {
+    top: 40%;
+    right: 0;
+    transform: translate(50%, 0%);
+    height: 65rem;
+    border-width: 12rem;
+    width: 34rem;
+    &.grey {
+      border-color: #f7f7f7;
+    }
+  }
+}
+.layout-shape {
+  z-index: 4;
+}
+
+.layout-shape.--start.--left {
+  transform: translate(-65%, -17rem);
+  top: 0 !important;
+}
+
+.invitation {
+  margin-bottom: 0;
+  padding-bottom: 8rem;
+  margin-top: 13rem;
+  position: relative;
+  z-index: 5;
+}

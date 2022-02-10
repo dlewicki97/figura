@@ -1,0 +1,42 @@
+@mixin main-top-shape($width, $direction: "") {
+  $height: $width * 1.5;
+  @if $direction==left {
+    left: 0;
+    top: 0;
+    transform: translate(-100%, -100%);
+  } @else if $direction == right {
+    right: 0;
+    transform: translate(50%, -50%);
+  }
+  @media (max-width: $mobile-xl) {
+    display: none;
+  }
+}
+.layout-shape {
+  position: absolute;
+  box-sizing: border-box;
+  border-color: $first;
+  border-style: solid;
+  z-index: 2;
+  @media (max-width: 992px) {
+    display: none;
+  }
+  &.--start.--left {
+    @include main-top-shape($content-margin * 2, left);
+    height: 25rem;
+    border-width: 5rem;
+    width: 19rem;
+    bottom: 0;
+    transform: translate(-65%, 50%);
+    top: unset;
+  }
+  &.--start.--right {
+    @include main-top-shape($content-margin * 3, right);
+    height: 44rem;
+    border-width: 8.5rem;
+    width: 30rem;
+  }
+  @media (max-width: $desktop-s) {
+    flex-direction: column;
+  }
+}

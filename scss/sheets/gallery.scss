@@ -1,0 +1,19 @@
+@import "../layout/layout";
+@import "../components/social-media";
+@import "../components/main-banner";
+@import "../components/about/main-section";
+@import "../components/about/invitation";
+@import "../components/gallery/gallery-section";
+
+.layout-shape {
+  z-index: 4;
+}
+
+.layout-shape.--start.--left {
+  transform: translate(-65%, 7rem);
+}
+
+.invitation {
+  margin-bottom: 0;
+  padding-bottom: 8rem;
+}

@@ -1,0 +1,9 @@
+$first: #ffa500;
+$second: #100F38;
+$third: #FFFFFF;
+$gray-text: rgb(160, 160, 160);
+:root {
+    --first: #{$first};
+    --second: #{$second};
+    --third: #{$third};
+}

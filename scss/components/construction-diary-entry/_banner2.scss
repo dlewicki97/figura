@@ -1,0 +1,40 @@
+.banner2 {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  margin-top: 5rem;
+  z-index: 0;
+  @media (max-width: 992px) {
+    .mask,
+    .text {
+      width: 100% !important;
+    }
+    .text {
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+    }
+  }
+  .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: orange;
+    opacity: 0.8;
+    z-index: 1;
+  }
+  .text {
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: 100;
+    line-height: 40px;
+    position: relative;
+    width: 50%;
+    z-index: 1;
+    padding: 8rem;
+    padding-right: 3rem;
+  }
+}

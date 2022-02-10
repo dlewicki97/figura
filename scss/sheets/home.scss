@@ -1,0 +1,70 @@
+@import "../layout/layout";
+@import "../components/slider";
+@import "../components/main-carousel";
+@import "../components/attributes";
+@import "../components/blocks";
+@import "../components/alternating-sections";
+@import "../components/between-sections";
+@import "../components/main-values";
+@import "../components/social-media";
+@import "../components/home/buy-rent";
+@import "../components/home/special-offer-article";
+@import "../components/home/localization";
+@import "../components/carousel/custom-carousel";
+@import "../helpers/sections-padding";
+
+.localization-main-values-investition-wrapper {
+  position: relative;
+  .layout-shape {
+    &.grey {
+      border-color: #f7f7f7 !important;
+    }
+    &.right {
+      right: -55rem;
+      top: 50%;
+      transform: translateY(-30%);
+      width: 82rem;
+      border-width: 17rem;
+      height: 50%;
+    }
+    &.left {
+      left: -19rem;
+      top: 70%;
+      transform: translateY(-30%);
+      width: 44rem;
+      border-width: 13rem;
+      height: 56rem;
+      z-index: -1;
+    }
+  }
+}
+
+.buy-rent-article {
+  z-index: 4;
+}
+.main-section__row {
+  @include sections-margin;
+}
+.blocks {
+  @include sections-margin;
+}
+.main-carousel {
+  @include sections-padding;
+  padding-right: 0;
+}
+.attributes {
+  @include sections-margin;
+  margin-top: -3rem;
+}
+.main-carousel {
+  @include sections-margin;
+}
+.main-values {
+  @include sections-margin;
+}
+.alternating-sections {
+  @include sections-margin;
+}
+.between-sections {
+  @include sections-margin;
+}

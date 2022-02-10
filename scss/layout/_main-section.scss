@@ -1,0 +1,85 @@
+.main-section {
+  @include content-container;
+
+  &__photo {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    position: relative;
+    @media (max-width: 992px) {
+      height: 400px;
+    }
+  }
+
+  &__row {
+    @include content-container;
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+    grid-gap: 5rem;
+    @media (max-width: $desktop-s) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__title {
+    width: 60%;
+    font-size: 3.6rem !important;
+    @media (max-width: 992px) {
+      width: 100%;
+    }
+    @media (max-width: 500px) {
+      font-size: 12vw !important;
+      line-height: 12vw !important;
+    }
+  }
+  &__title,
+  &__title--center {
+    color: #101010;
+    @include section-title;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 3.5rem;
+      height: 0.5rem;
+      background-color: $first;
+      margin-top: 1.7rem;
+    }
+  }
+  &__title--center {
+    text-align: center;
+    &:after {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  &__description {
+    padding-right: 8rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    @media (max-width: 992px) {
+      padding-top: 0;
+      padding-bottom: 0;
+      padding-right: 0;
+    }
+    @media (max-width: 500px) {
+      .main-btn {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+    p {
+    }
+  }
+  &__description,
+  &__description--center {
+    color: #101010;
+    @include main-font;
+    margin: auto;
+  }
+  &__description--center {
+    text-align: center;
+  }
+}

@@ -1,0 +1,8 @@
+@mixin sections-padding {
+  padding-bottom: $content-padding * 1.5;
+  padding-top: $content-padding * 1.5;
+  @media (max-width: $mobile-xl) {
+    padding-top: $content-padding;
+    padding-bottom: $content-padding;
+  }
+}

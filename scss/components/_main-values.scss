@@ -1,0 +1,36 @@
+.main-values {
+  &__row {
+    display: flex;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    @include content-container;
+    gap: 2rem 5rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @media (max-width: 992px) {
+      justify-content: center;
+    }
+  }
+  &__item {
+    text-align: center;
+    align-self: center;
+    flex: 0 0 calc(20% - 8rem);
+    align-self: stretch;
+    @media (max-width: $desktop-m) {
+      flex: 0 0 calc(50% - 8rem);
+    }
+    @media (max-width: $mobile-l) {
+      flex: 0 0 calc(100% - 8rem);
+    }
+    &-photo {
+    }
+    &-title {
+      color: #fff;
+      font-size: 1.6rem;
+      font-weight: 700;
+      line-height: 1.8rem;
+      text-align: center;
+      margin-top: 1.4rem;
+    }
+  }
+}

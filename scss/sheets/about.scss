@@ -1,0 +1,11 @@
+@import "../layout/layout";
+@import "../components/social-media";
+@import "../components/main-banner";
+@import "../components/about/main-section";
+@import "../components/about/attributes";
+@import "../components/about/koszalin";
+@import "../components/about/invitation";
+
+.main-about {
+  @include sections-margin;
+}

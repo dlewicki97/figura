@@ -1,0 +1,142 @@
+article {
+  &:first-child {
+    z-index: 4;
+
+    .layout-shape {
+      transform: translate(-65%, 5rem) !important;
+    }
+  }
+}
+
+.parameters-section {
+  padding: 7rem;
+  background-color: #f7f7f7;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 13rem;
+  padding-right: 13rem;
+  padding-bottom: 0rem;
+  @media (max-width: 1600px) {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+  @media (max-width: 1450px) {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    .parameters-column {
+      padding-right: 3rem !important;
+    }
+  }
+  @media (max-width: 1200px) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    .parameters-column,
+    .project-column {
+      width: 100% !important;
+    }
+    .parameters-column {
+      padding-right: 0 !important;
+    }
+  }
+  @media (max-width: 768px) {
+    .button-container {
+      margin-left: 0 !important;
+      .main-btn {
+        width: 100% !important;
+      }
+    }
+    .parameter {
+      display: flex !important;
+      flex-direction: column;
+      .parameters__row {
+        background-color: #fff !important;
+        margin-top: 0.5rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+  .parameters-column {
+    width: 50%;
+    padding-right: 8rem;
+    .project {
+      width: 100%;
+      height: auto;
+      mix-blend-mode: multiply;
+    }
+
+    .parameters {
+      .parameter {
+        display: grid;
+        grid-template-columns: 1fr 9fr;
+        &:nth-child(2n - 1) {
+          .parameters__row {
+            background-color: #fff;
+          }
+        }
+        .icon-container {
+          background-color: #fff;
+          width: 65px;
+          height: 65px;
+          margin-right: 2rem;
+          box-shadow: 0px 0px 10px #0000001a;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .icon {
+            height: 35px;
+          }
+        }
+      }
+      &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        width: 100%;
+        font-size: 1.3rem;
+
+        &__title {
+        }
+        &__value {
+          font-weight: 700;
+          text-align: right;
+        }
+      }
+    }
+    .button-container {
+      margin-left: 2.5rem;
+      button {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .project-column {
+    width: 50%;
+    position: relative;
+    &:hover {
+      .project {
+        opacity: 0.41;
+      }
+      .zoom {
+        opacity: 1;
+      }
+    }
+    .project,
+    .zoom {
+      transition: opacity 0.2s;
+    }
+    .zoom {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 115px;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      z-index: 1;
+    }
+    .project {
+      width: 100%;
+      mix-blend-mode: multiply;
+    }
+  }
+}

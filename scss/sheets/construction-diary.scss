@@ -1,0 +1,50 @@
+@import "../layout/layout";
+@import "../components/social-media";
+@import "../components/main-banner";
+@import "../components/about/main-section";
+@import "../components/about/invitation";
+
+.layout-shape.--start.--left {
+  transform: translate(-65%, 5rem);
+}
+.main-about {
+  @include sections-margin;
+
+  .main-section__date {
+    font-style: italic;
+    color: orange;
+    letter-spacing: 3.24px;
+  }
+  .main-section__title {
+    width: 100%;
+  }
+  .main-section__link {
+    color: orange;
+    transition: color 0.2s;
+    letter-spacing: 3.24px;
+    margin-top: 1rem;
+    display: block;
+    font-weight: 200;
+    width: fit-content;
+    &:hover {
+      color: $second;
+    }
+  }
+  .main-section__row {
+    &:nth-child(2n) {
+      background: -webkit-linear-gradient(0deg, #f7f7f7 80%, white 20%);
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+    &:nth-child(2n - 1) {
+    }
+    .photo-container {
+      padding: 0;
+    }
+    .main-section__description {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+      padding-right: 0;
+    }
+  }
+}
